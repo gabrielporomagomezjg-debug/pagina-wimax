@@ -1,0 +1,132 @@
+
+header {
+    background: #0F1112;
+    color: #F7F3EC;
+    height: 80px;
+    padding: 0 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+}
+
+
+.logo h1 {
+    font-size: 25px;
+}
+
+header nav {
+    display: flex;
+
+    gap: 30px;
+}
+
+header nav a {
+    color: #F7F3EC;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+    position: relative;
+}
+
+header nav a::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    background: #A63D32;
+    border-radius: 20px;
+    transition: 0.5s;
+    
+}
+header nav a:hover::after {
+    width: 100%;
+}
+
+
+
+footer {
+    background: #0F1112;
+    color: #F7F3EC;
+    padding: 40px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* LOGO DEL FOOTER */
+
+footer h2 {
+    font-size: 20px;
+
+    margin: 0;
+}
+
+footer p {
+    font-size: 16px;
+
+    color: #A9A39A;
+}
+
+
+/* NAVEGACIÓN DEL FOOTER */
+
+footer nav {
+    display: flex;
+    gap: 15px;
+}
+
+footer nav a {
+    color: #A9A39A;
+
+    text-decoration: none;
+
+    font-size: 15px;
+}
+
+footer nav a:hover {
+    color: #A63D32;
+}
+
+
+/* =========================
+   HEADER Y FOOTER
+   EN PANTALLAS PEQUEÑAS
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+    footer nav{
+        flex-direction: column;
+    }
+
+}
